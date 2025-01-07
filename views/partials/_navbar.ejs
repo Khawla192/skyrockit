@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/partials.css" />
     <title>Document</title>
 </head>
+
 <body>
     <nav>
         <% if(user) { %>
-            <a href="/users/<%= user._id %>/applications">Your Apps</a>
-            <a href="/auth/sign-out">Sign Out</a>
+            <div class="navbar">
+                <h1 id="nav-header">Skyrockit</h1>
+                <div class="nav-links">
+                    <a class="authlink" href="/users/<%=user._id%>/applications">Your Apps</a>
+                    <a class="authlink" href="/auth/sign-out">Sign Out</a>
+                </div>
+            </div>
             <% } else { %>
-                <a href="/auth/sign-in">Sign In</a>
-                <a href="/auth/sign-up">Sign Up</a>
+                <div class="navbar">
+                    <h1 id="nav-header">Skyrockit</h1>
+                    <div class="nav-links">
+                        <a class="authlink" href="/auth/sign-in">Sign In</a>
+                        <a class="authlink" href="/auth/sign-up">Sign Up</a>
+                    </div>
+                </div>
                 <% } %>
     </nav>
 </body>
+
 </html>
