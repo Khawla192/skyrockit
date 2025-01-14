@@ -11,7 +11,6 @@
 <body>
   <%- include('../partials/_navbar.ejs') %>
     <h1>Your Apps</h1>
-    <a href="/users/<%=user._id%>/applications/new">Add an App</a>
     <div class="new-body">
       <form action="/users/<%= user._id %>/applications" method="POST">
         <label for="company">Company:</label>
